@@ -1,6 +1,5 @@
 import SecondaryButton from '@/components/SecondaryButton'
 import Image from 'next/image'
-import Link from 'next/link'
 
 const Hero = () => {
 	return (
