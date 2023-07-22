@@ -13,6 +13,9 @@ module.exports = {
 				'accent-gradient':
 					'linear-gradient(27deg, #FFC593 0.08%, #BC7198 51.95%, #5A77FF 100%)',
 			},
+			padding: {
+				18: '72px',
+			},
 		},
 	},
 	plugins: [],

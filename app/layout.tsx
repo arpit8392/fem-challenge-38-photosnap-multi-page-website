@@ -19,9 +19,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${dm_sans.className} scroll-smooth antialiased bg-white`}>
+			<body
+				className={`${dm_sans.className} scroll-smooth bg-white antialiased`}>
 				<Header />
-				<main>{children}</main>
+				<main className='min-h-screen bg-white'>{children}</main>
 				<Footer />
 			</body>
 		</html>
