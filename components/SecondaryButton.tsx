@@ -22,7 +22,7 @@ const SecondaryButton = ({ title, link, isDark }: Props) => {
 					width='43'
 					height='14'
 					className={clsx(isDark ? 'stroke-white' : 'stroke-black')}>
-					<g fill='none' fill-rule='evenodd'>
+					<g fill='none' fillRule='evenodd'>
 						<path d='M0 7h41.864M35.428 1l6 6-6 6' />
 					</g>
 				</svg>

@@ -1,4 +1,4 @@
-type Feature = {
+type Highlight = {
 	id: number
 	title: string
 	description: string

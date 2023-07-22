@@ -13,7 +13,7 @@ export const navLinks = [
 	},
 ]
 
-export const features: Feature[] = [
+export const highlights: Highlight[] = [
 	{
 		id: 1,
 		title: 'Beautiful stories every time',

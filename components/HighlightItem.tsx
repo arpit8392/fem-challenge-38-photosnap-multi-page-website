@@ -2,7 +2,7 @@ import SecondaryButton from '@/components/SecondaryButton'
 import clsx from 'clsx'
 import Image from 'next/image'
 
-const FeatureItem = ({ id, title, description, image, link }: Feature) => {
+const HighlightItem = ({ id, title, description, image, link }: Highlight) => {
 	return (
 		<figure className='grid grid-cols-1 md:grid-cols-5'>
 			<picture
@@ -44,4 +44,4 @@ const FeatureItem = ({ id, title, description, image, link }: Feature) => {
 		</figure>
 	)
 }
-export default FeatureItem
+export default HighlightItem
