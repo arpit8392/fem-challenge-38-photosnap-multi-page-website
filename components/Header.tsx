@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { navLinks } from '@/data'
 import { Dialog } from '@headlessui/react'
+import PrimaryButton from './PrimaryButton'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -67,11 +68,7 @@ const Header = () => {
 						))}
 					</ul>
 					<hr className='border-black/25' />
-					<Link
-						href={'#'}
-						className='bg-black py-4 text-center text-[15px] font-bold uppercase tracking-[2.5px] text-white hover:bg-lightGrey hover:text-black'>
-						Get an invite
-					</Link>
+					<PrimaryButton title='Get an invite' link='#' isDark />
 				</Dialog.Panel>
 			</Dialog>
 		</header>
