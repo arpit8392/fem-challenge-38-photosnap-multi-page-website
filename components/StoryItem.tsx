@@ -1,7 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const StoryItem = ({ id, createdDate, title, author, image }: Story) => {
+type Props = {
+	story: Story
+	publishDate?: boolean
+}
+
+const StoryItem = ({
+	story: { createdDate, image, title, author },
+	publishDate,
+}: Props) => {
 	return (
 		<article>
 			<div className='relative h-[375px] w-full md:h-[500px]'>
@@ -19,6 +27,7 @@ const StoryItem = ({ id, createdDate, title, author, image }: Story) => {
 				/>
 				<div className='absolute bottom-0 flex w-full flex-col gap-4 bg-dark-overlay px-8 py-10 text-white md:px-11 lg:p-10'>
 					<div className='flex flex-col gap-1'>
+						{publishDate && <p className='text-[13px]'>{createdDate}</p>}
 						<h3 className='text-lg font-bold'>{title}</h3>
 						<p className='text-[13px]'>{`by ${author}`}</p>
 					</div>

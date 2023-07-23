@@ -1,6 +1,4 @@
-import BetaMode from '@/components/BetaMode'
 import FeatureItem from '@/components/FeatureItem'
-import Features from '@/components/Features'
 import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'
 import Highlights from '@/components/Highlights'
