@@ -1,3 +1,4 @@
+import BetaMode from '@/components/BetaMode'
 import Features from '@/components/Features'
 import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'
