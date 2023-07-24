@@ -20,7 +20,7 @@ const PricingComparison = () => {
 								<th
 									key={index}
 									scope='col'
-									className='py-6 text-left text-xs font-bold uppercase tracking-[2px] px-2'>
+									className='px-2 py-6 text-left text-xs font-bold uppercase tracking-[2px]'>
 									{item}
 								</th>
 							))}
@@ -35,11 +35,13 @@ const PricingComparison = () => {
 								{Object.entries(feature.tiers).map((tier, index) => (
 									<td key={index}>
 										{tier[1] && (
-											<Image
-												src={Tick}
-												alt=''
-												className='w-auto object-contain px-4'
-											/>
+											<div className='flex items-center justify-center md:justify-normal'>
+												<Image
+													src={Tick}
+													alt=''
+													className='w-auto object-contain md:px-4'
+												/>
+											</div>
 										)}
 									</td>
 								))}
