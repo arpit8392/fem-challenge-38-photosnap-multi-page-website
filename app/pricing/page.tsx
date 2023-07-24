@@ -1,5 +1,6 @@
 import BetaMode from '@/components/BetaMode'
 import Hero from '@/components/Hero'
+import PricingComparison from '@/components/PricingComparison'
 
 const PricingPage = () => {
 	return (
@@ -10,6 +11,7 @@ const PricingPage = () => {
 				imagePath='pricing'
 				imageName='hero.jpg'
 			/>
+			<PricingComparison />
 			<BetaMode />
 		</>
 	)

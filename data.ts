@@ -198,3 +198,103 @@ export const features: Feature[] = [
 		icon: DragDropIcon,
 	},
 ]
+
+export const pricingTiers = [
+	{
+		plan: 'Basic',
+		summary:
+			'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
+		pricing: {
+			monthly: 19,
+			yearly: 190,
+		},
+		link: '#',
+	},
+	{
+		plan: 'Pro',
+		summary:
+			'More advanced features available. Recommended for photography veterans and professionals.',
+		pricing: {
+			monthly: 39,
+			yearly: 390,
+		},
+		link: '#',
+	},
+	{
+		plan: 'Business',
+		summary:
+			'Additional features available such as more detailed metrics. Recommended for business owners.',
+		pricing: {
+			monthly: 99,
+			yearly: 990,
+		},
+		link: '#',
+	},
+]
+
+export const pricingPlanFeatures = [
+	{
+		feature: 'Unlimited Story Posting',
+		tiers: {
+			Basic: true,
+			Pro: true,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Unlimited Photo Upload',
+		tiers: {
+			Basic: true,
+			Pro: true,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Embedding Custom Content',
+		tiers: {
+			Basic: false,
+			Pro: true,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Customize Metadata',
+		tiers: {
+			Basic: false,
+			Pro: true,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Advanced Metrics',
+		tiers: {
+			Basic: false,
+			Pro: false,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Photo Downloads',
+		tiers: {
+			Basic: false,
+			Pro: false,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Search Engine Indexing',
+		tiers: {
+			Basic: false,
+			Pro: false,
+			Business: true,
+		},
+	},
+	{
+		feature: 'Custom Analytics',
+		tiers: {
+			Basic: false,
+			Pro: false,
+			Business: true,
+		},
+	},
+]
