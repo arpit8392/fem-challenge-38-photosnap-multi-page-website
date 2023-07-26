@@ -199,7 +199,7 @@ export const features: Feature[] = [
 	},
 ]
 
-export const frequencies = [
+export const frequencies : Frequency[] = [
 	{ value: 'monthly', label: 'Monthly', priceSuffix: 'per month' },
 	{ value: 'annually', label: 'Annually', priceSuffix: 'per year' },
 ]

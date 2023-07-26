@@ -20,3 +20,21 @@ type Feature = {
 	description: string
 	icon: any
 }
+
+interface Pricing {
+	monthly: number
+	annually: number
+}
+
+interface Frequency {
+	value: 'monthly' | 'annually' // Assuming 'value' can only be 'monthly' or 'annually'
+	label: string
+	priceSuffix: string
+}
+
+interface PricingTiers {
+	plan: string
+	summary: string
+	pricing: Pricing
+	link: string
+}
