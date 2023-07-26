@@ -199,6 +199,11 @@ export const features: Feature[] = [
 	},
 ]
 
+export const frequencies = [
+	{ value: 'monthly', label: 'Monthly', priceSuffix: 'per month' },
+	{ value: 'annually', label: 'Annually', priceSuffix: 'per year' },
+]
+
 export const pricingTiers = [
 	{
 		plan: 'Basic',
@@ -206,7 +211,7 @@ export const pricingTiers = [
 			'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
 		pricing: {
 			monthly: 19,
-			yearly: 190,
+			annually: 190,
 		},
 		link: '#',
 	},
@@ -216,7 +221,7 @@ export const pricingTiers = [
 			'More advanced features available. Recommended for photography veterans and professionals.',
 		pricing: {
 			monthly: 39,
-			yearly: 390,
+			annually: 390,
 		},
 		link: '#',
 	},
@@ -226,7 +231,7 @@ export const pricingTiers = [
 			'Additional features available such as more detailed metrics. Recommended for business owners.',
 		pricing: {
 			monthly: 99,
-			yearly: 990,
+			annually: 990,
 		},
 		link: '#',
 	},

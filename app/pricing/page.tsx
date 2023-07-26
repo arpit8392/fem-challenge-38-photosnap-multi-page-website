@@ -1,5 +1,6 @@
 import BetaMode from '@/components/BetaMode'
 import Hero from '@/components/Hero'
+import PlanCTA from '@/components/PlanCTA'
 import PricingComparison from '@/components/PricingComparison'
 
 const PricingPage = () => {
@@ -11,6 +12,7 @@ const PricingPage = () => {
 				imagePath='pricing'
 				imageName='hero.jpg'
 			/>
+			<PlanCTA />
 			<PricingComparison />
 			<BetaMode />
 		</>
