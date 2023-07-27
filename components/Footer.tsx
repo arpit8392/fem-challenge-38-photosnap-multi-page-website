@@ -19,7 +19,7 @@ const Footer = () => {
 				<ul className='flex flex-col items-center gap-5 md:items-start'>
 					<li>
 						<Link
-							href={'#'}
+							href={'/'}
 							className='text-xs font-bold uppercase tracking-[2px] text-white hover:text-white/30'>
 							Home
 						</Link>
