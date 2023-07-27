@@ -19,7 +19,7 @@ const PlanCTA = () => {
 	}
 
 	return (
-		<section className='flex flex-col items-center gap-10 px-7 py-16 md:px-10 md:py-28 lg:px-40 lg:pt-32 lg:gap-12'>
+		<section className='flex flex-col items-center gap-10 px-7 py-16 md:px-10 md:py-28 lg:gap-12 lg:px-40 lg:pt-32'>
 			<Switch.Group as='div' className='group flex items-center gap-8'>
 				<Switch.Label as='span'>
 					<span

@@ -5,18 +5,37 @@ import { navLinks } from '@/data'
 import Link from 'next/link'
 import SocialLinks from './SocialLinks'
 
-// TODO: Tablet Screen Footer Layout is not as per the design and currently mimicks same layout as on large screen
 // TODO: Hover colors on all the footer links (SVGs) are same color - first one which is not as per the design
 
 const Footer = () => {
 	return (
 		<footer className='flex flex-col items-center gap-32 bg-black px-8 py-14 text-white md:flex-row md:items-baseline md:justify-between md:px-10 md:py-16 lg:px-44'>
 			<div className='flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-12 lg:gap-28'>
-				<div className='flex flex-col items-center gap-8 md:items-start md:gap-28'>
-					<Image src={Logo} alt='' className='w-auto object-contain' />
+				<div className='flex flex-col items-center gap-8 md:items-start md:gap-16 lg:gap-28'>
+					<div className='flex flex-col gap-8'>
+						<Image src={Logo} alt='' className='' />
+						<ul className='hidden items-center gap-7 md:flex lg:hidden'>
+							<li>
+								<Link
+									href={'/'}
+									className='text-xs font-bold uppercase tracking-[2px] text-white hover:text-white/30'>
+									Home
+								</Link>
+							</li>
+							{navLinks.map((item, index) => (
+								<li key={index}>
+									<Link
+										href={item.href}
+										className='text-xs font-bold uppercase tracking-[2px] text-white hover:text-white/30'>
+										{item.title}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
 					<SocialLinks />
 				</div>
-				<ul className='flex flex-col items-center gap-5 md:items-start'>
+				<ul className='flex flex-col items-center gap-5 md:hidden md:items-start lg:flex'>
 					<li>
 						<Link
 							href={'/'}
