@@ -19,7 +19,7 @@ const PlanCTA = () => {
 	}
 
 	return (
-		<section className='flex flex-col items-center gap-10 px-7 py-16 md:px-10 md:py-28 lg:px-40 lg:pt-32'>
+		<section className='flex flex-col items-center gap-10 px-7 py-16 md:px-10 md:py-28 lg:px-40 lg:pt-32 lg:gap-12'>
 			<Switch.Group as='div' className='group flex items-center gap-8'>
 				<Switch.Label as='span'>
 					<span
@@ -66,12 +66,12 @@ const PlanCTA = () => {
 						{({ checked }) => (
 							<div
 								className={clsx(
-									'flex flex-col gap-10 px-9 py-14',
+									'grid grid-cols-1 gap-10 px-9 py-14 md:grid-cols-2 md:pl-10 md:pr-12 lg:grid-cols-1 lg:px-10 lg:py-20',
 									checked
 										? 'relative scale-105 bg-black text-white duration-200 before:absolute before:inset-0 before:h-[6px] before:bg-accent-gradient md:before:h-full md:before:w-[6px] lg:before:h-[6px] lg:before:w-full'
 										: ' bg-[#F5F5F5] text-black'
 								)}>
-								<div className='flex flex-col gap-[18px] text-center'>
+								<div className='flex flex-col gap-[18px] text-center md:text-left lg:text-center'>
 									<h2 className='text-2xl font-bold'>{tier.plan}</h2>
 									<p
 										className={clsx(
@@ -83,7 +83,7 @@ const PlanCTA = () => {
 								</div>
 								<div
 									className={clsx(
-										'flex flex-col items-center text-[15px]/[25px]',
+										'flex flex-col items-center text-[15px]/[25px] md:items-end lg:items-center',
 										checked ? 'text-white/60' : 'text-black/60'
 									)}>
 									<span
