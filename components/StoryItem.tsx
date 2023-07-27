@@ -11,7 +11,7 @@ const StoryItem = ({
 	publishDate,
 }: Props) => {
 	return (
-		<article>
+		<article className='relative cursor-pointer after:h-[6px] after:w-full after:bg-accent-gradient hover:-translate-y-6 after:hover:absolute'>
 			<div className='relative h-[375px] w-full md:h-[500px]'>
 				<Image
 					src={`/assets/stories/mobile/${image}`}

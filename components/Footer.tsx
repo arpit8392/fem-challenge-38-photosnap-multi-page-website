@@ -13,7 +13,7 @@ const Footer = () => {
 			<div className='flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-12 lg:gap-28'>
 				<div className='flex flex-col items-center gap-8 md:items-start md:gap-16 lg:gap-28'>
 					<div className='flex flex-col gap-8'>
-						<Image src={Logo} alt='' className='' />
+						<Image src={Logo} alt='Photosnap' />
 						<ul className='hidden items-center gap-7 md:flex lg:hidden'>
 							<li>
 								<Link
