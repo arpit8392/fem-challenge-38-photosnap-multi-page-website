@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Link from 'next/link'
 
 type IconProps = {
@@ -11,7 +12,7 @@ const socialLinks = [
 		icon: (props: IconProps) => (
 			<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' {...props}>
 				<defs>
-					<linearGradient id='a' x1='100%' x2='0%' y1='0%' y2='100%'>
+					<linearGradient id='facebook' x1='100%' x2='0%' y1='0%' y2='100%'>
 						<stop offset='0%' stopColor='#63AFDB' />
 						<stop offset='100%' stopColor='#6028F1' />
 					</linearGradient>
@@ -26,7 +27,7 @@ const socialLinks = [
 		icon: (props: IconProps) => (
 			<svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' {...props}>
 				<defs>
-					<linearGradient id='a' x1='0%' x2='100%' y1='100%' y2='0%'>
+					<linearGradient id='youtube' x1='0%' x2='100%' y1='100%' y2='0%'>
 						<stop offset='0%' stopColor='#D3205A' />
 						<stop offset='100%' stopColor='#FF5A5A' />
 					</linearGradient>
@@ -44,7 +45,12 @@ const socialLinks = [
 		icon: (props: IconProps) => (
 			<svg xmlns='http://www.w3.org/2000/svg' width='21' height='18' {...props}>
 				<defs>
-					<linearGradient id='a' x1='100%' x2='0%' y1='16.979%' y2='83.021%'>
+					<linearGradient
+						id='twitter'
+						x1='100%'
+						x2='0%'
+						y1='16.979%'
+						y2='83.021%'>
 						<stop offset='0%' stopColor='#65FFEB' />
 						<stop offset='100%' stopColor='#27718A' />
 					</linearGradient>
@@ -62,7 +68,7 @@ const socialLinks = [
 		icon: (props: IconProps) => (
 			<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' {...props}>
 				<defs>
-					<linearGradient id='a' x1='100%' x2='0%' y1='0%' y2='100%'>
+					<linearGradient id='pinterest' x1='100%' x2='0%' y1='0%' y2='100%'>
 						<stop offset='0%' stopColor='#F6C683' />
 						<stop offset='100%' stopColor='#DE3838' />
 					</linearGradient>
@@ -80,7 +86,7 @@ const socialLinks = [
 		icon: (props: IconProps) => (
 			<svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' {...props}>
 				<defs>
-					<linearGradient id='a' x1='0%' x2='50%' y1='100%' y2='0%'>
+					<linearGradient id='instagram' x1='0%' x2='50%' y1='100%' y2='0%'>
 						<stop offset='0%' stopColor='#FFC593' />
 						<stop offset='51.945%' stopColor='#BC7198' />
 						<stop offset='100%' stopColor='#5A77FF' />
@@ -95,6 +101,9 @@ const socialLinks = [
 	},
 ]
 
+const generateHoverClass = (id: string): string =>
+	`hover:fill-[url(#${id.toLowerCase()})]`
+
 const SocialLinks = () => {
 	return (
 		<ul className='flex flex-row items-center gap-4'>
@@ -104,7 +113,21 @@ const SocialLinks = () => {
 						prefetch={false}
 						href={link.href}
 						aria-label={`Social Media Link for ${link.name} handle`}>
-						<link.icon className='fill-white hover:fill-[url(#a)]' />
+						<link.icon
+							className={clsx(
+								'fill-white',
+								link.name.toLowerCase() === 'facebook' &&
+									'hover:fill-[url(#facebook)]',
+								link.name.toLowerCase() === 'youtube' &&
+									'hover:fill-[url(#youtube)]',
+								link.name.toLowerCase() === 'twitter' &&
+									'hover:fill-[url(#twitter)]',
+								link.name.toLowerCase() === 'pinterest' &&
+									'hover:fill-[url(#pinterest)]',
+								link.name.toLowerCase() === 'instagram' &&
+									'hover:fill-[url(#instagram)]'
+							)}
+						/>
 					</Link>
 				</li>
 			))}

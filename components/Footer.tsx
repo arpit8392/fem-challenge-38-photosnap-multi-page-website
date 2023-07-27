@@ -5,8 +5,6 @@ import { navLinks } from '@/data'
 import Link from 'next/link'
 import SocialLinks from './SocialLinks'
 
-// TODO: Hover colors on all the footer links (SVGs) are same color - first one which is not as per the design
-
 const Footer = () => {
 	return (
 		<footer className='flex flex-col items-center gap-32 bg-black px-8 py-14 text-white md:flex-row md:items-baseline md:justify-between md:px-10 md:py-16 lg:px-44'>
